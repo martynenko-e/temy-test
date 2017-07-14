@@ -34,7 +34,9 @@ def login_view(request):
         login(request, user)  
     else:
         user = User.objects.create_user(username, '', 'password')
-        status, created = Status.objects.get_or_create(name="On Vacation")
+        status, created = Status.objects.get_or_create(name="Vacation")
+        Status.objects.get_or_create(name="Working")
+        Status.objects.get_or_create(name="Business Trip")
         user.status = status
         user.save()
         user = authenticate(username=username, password='password')

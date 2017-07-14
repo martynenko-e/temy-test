@@ -89,6 +89,12 @@ CSRF_COOKIE_SECURE = True
 
 AUTH_USER_MODEL = 'localuser.User'
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    )
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 

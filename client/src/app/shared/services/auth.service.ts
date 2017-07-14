@@ -9,7 +9,7 @@ export class AuthService {
     private userstatus: string;
     private userid: string;
     private changeUserUrl: string = window.location.protocol + "//"
-    + window.location.hostname + ":" + window.location.port + '/api/users/'
+    + window.location.hostname + ":" + window.location.port + '/api/v2/users/'
     private loginUrl: string = window.location.protocol + "//"
     + window.location.hostname + ":" + window.location.port + '/api/auth/login/'
     private logoutUrl: string = window.location.protocol + "//"
