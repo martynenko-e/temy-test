@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="header clearfix">
+    <nav>
+        <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+                <a *ngIf="isLoggedIn" class="nav-link tm-log-button" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    <h3 class="text-muted">My Work Status</h3>
+</div>
+<div class="marketing">
+
+    <div class="col-xs-12">
+        <login-form *ngIf="!isLoggedIn"></login-form>
+    </div>
+
+    <div class="col-xs-12">
+        <user-info *ngIf="isLoggedIn"></user-info>
+        <br>
+        <hr *ngIf="isLoggedIn">
+        <div class="marketing">
+            <user-list *ngIf="isLoggedIn"></user-list>
+        </div>
+    </div>
+
+</div>

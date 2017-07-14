@@ -1,0 +1,12 @@
+<h2 class="tm-h2">Hello {{ username }}, you are on {{ status }}</h2>
+
+<div *ngIf="statuses">
+  <div class="form-group">
+    <label for="sel2">Update My Current Status:</label>
+    <select class="form-control" [(ngModel)]="selectedStatus" (ngModelChange)="onChangeStatus($event)">
+      <option *ngFor="let status of statuses" [ngValue]="status">
+        {{status.name}}
+      </option>
+    </select>
+  </div>
+</div>

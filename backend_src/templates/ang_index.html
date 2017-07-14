@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block meta %}
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="{% static 'ang/favicon.ico' %}">
+    <link href="{% static 'ang/styles.bundle.css'%}" rel="stylesheet"/>
+{% endblock meta %}
+{% block bottomscript %}
+    <script type="text/javascript" src="{% static 'ang/inline.bundle.js' %}"></script>
+    <script type="text/javascript" src="{% static 'ang/polyfills.bundle.js' %}"></script>
+    <script type="text/javascript" src="{% static 'ang/vendor.bundle.js' %}"></script>
+    <script type="text/javascript" src="{% static 'ang/main.bundle.js' %}"></script>
+    <!--<script type="text/javascript" src="{% static 'ang/styles.bundle.js' %}"></script>-->
+{% endblock bottomscript %}
+{% block content %}
+    {% csrf_token %}
+    <app-root></app-root>
+{% endblock content %}

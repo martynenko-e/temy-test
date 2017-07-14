@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+.tm-log-button:hover {
+    cursor: pointer
+}
+
+.tm-h2 {
+    color:#00b4ff
+}
