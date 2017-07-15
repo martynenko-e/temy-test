@@ -85,13 +85,14 @@ DATABASES = {
     }
 }
 
-CSRF_COOKIE_SECURE = True
-
 AUTH_USER_MODEL = 'localuser.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
     )
 }
 
@@ -134,3 +135,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+CSRF_USE_SESSIONS = False
+
+CSRF_COOKIE_SECURE = False

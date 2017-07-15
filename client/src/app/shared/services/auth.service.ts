@@ -9,7 +9,7 @@ export class AuthService {
     private userstatus: string;
     private userid: string;
     private changeUserUrl: string = window.location.protocol + "//"
-    + window.location.hostname + ":" + window.location.port + '/api/v2/users/'
+    + window.location.hostname + ":" + window.location.port + '/api/users/'
     private loginUrl: string = window.location.protocol + "//"
     + window.location.hostname + ":" + window.location.port + '/api/auth/login/'
     private logoutUrl: string = window.location.protocol + "//"
@@ -44,7 +44,6 @@ export class AuthService {
      * @param res 
      */
     private extractData(res: Response) {
-        // return res.status;
         // console.log(res)
         let body = res.json();
         return body || {};
@@ -114,8 +113,7 @@ export class AuthService {
     }
 
     changeUserStatus(status: string, id: string): Observable<User> {
-        // console.log("Your make request for change status " + status)
-        // console.log(this.changeUserUrl + id + "/")
+        
         let url = this.changeUserUrl + id + "/"
         let headers
         if (document.getElementsByName("csrfmiddlewaretoken").length > 0) {
