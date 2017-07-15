@@ -1,6 +1,6 @@
 ## Start project
 
-* Run script name of project as first arg
+* Run current project in docker container
 ```cmd
-    ./run.sh -
+    ./run.sh -b
 ```
